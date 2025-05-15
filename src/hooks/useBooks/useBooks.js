@@ -2,8 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { BooksRepository } from "../../repositories";
 import { useViewMode } from "../../hooks";
 
-export const useBooks = () => {
-  const booksRepository = new BooksRepository()
+export const useBooks = (booksRepository = new BooksRepository()) => {
   const viewMode = useViewMode();
   const [books, setBooks] = useState([]);
   const [error, setError] = useState(null);
