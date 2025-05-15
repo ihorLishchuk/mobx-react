@@ -6,7 +6,7 @@ export const BooksList = ({ books }) => {
   return (
     <ul>
       {books.map((book, i) => (
-        <li key={i}>
+        <li key={book.name + i + book.author}>
           <strong>{book.name}</strong> by {book.author}
         </li>
       ))}
